@@ -1,0 +1,98 @@
+# ─────────────────────────────────────────────
+# Model Outputs (ขนาดใหญ่มาก ไม่ควร commit)
+# ─────────────────────────────────────────────
+outputs/
+**/outputs/
+
+# LoRA weights
+lora_model/
+lora_model_chat/
+lora_model_dpo/
+
+# Merged models
+merged_model/
+
+# GGUF files (ขนาดใหญ่มาก 4-16GB)
+*.gguf
+gguf_f16/
+gguf_q4/
+
+# HuggingFace model cache
+*.safetensors
+*.bin
+tokenizer.model
+special_tokens_map.json
+
+# ─────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ─────────────────────────────────────────────
+# Jupyter Notebooks
+# ─────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Notebook outputs (ล้าง output ก่อน commit)
+# ถ้าต้องการ track .ipynb ให้ลบบรรทัดนี้ออก
+# *.ipynb
+
+# ─────────────────────────────────────────────
+# Data & Datasets
+# ─────────────────────────────────────────────
+# HuggingFace datasets cache
+~/.cache/huggingface/
+.cache/
+
+# Local dataset files
+data/
+*.jsonl
+*.parquet
+*.arrow
+
+# ─────────────────────────────────────────────
+# Logs & Monitoring
+# ─────────────────────────────────────────────
+logs/
+runs/
+wandb/
+tensorboard/
+*.log
+
+# ─────────────────────────────────────────────
+# Environment & Secrets
+# ─────────────────────────────────────────────
+.env
+.env.local
+*.env
+
+# HuggingFace token (อย่า commit token เด็ดขาด!)
+.huggingface/
+token.txt
+hf_token.txt
+
+# ─────────────────────────────────────────────
+# OS & Editor
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

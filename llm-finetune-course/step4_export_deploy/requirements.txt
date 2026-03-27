@@ -1,0 +1,25 @@
+# Step 4: Export & Deploy
+# ติดตั้ง: pip install -r requirements.txt
+#
+# หมายเหตุ: unsloth ต้องติดตั้งแยกก่อนเสมอ เพราะมี dependency พิเศษ
+# สำหรับ Google Colab:
+#   pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+#   pip install -r requirements.txt
+#
+# ⚠️  การ Export .gguf ต้องการ llama.cpp ซึ่ง unsloth จัดการให้อัตโนมัติ
+#     ไม่ต้องติดตั้ง llama.cpp แยก
+
+# Core
+torch>=2.1.0
+transformers>=4.40.0
+
+# Unsloth (ติดตั้งแยกตาม platform ด้านบน)
+# unsloth
+
+# Fine-tuning (ใช้สำหรับ load LoRA model)
+peft>=0.10.0
+accelerate>=0.28.0
+bitsandbytes>=0.43.0
+
+# HuggingFace Hub (สำหรับ push_to_hub - optional)
+huggingface_hub>=0.22.0

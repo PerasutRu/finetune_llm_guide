@@ -1,0 +1,26 @@
+# Step 3: DPO Alignment
+# ติดตั้ง: pip install -r requirements.txt
+#
+# หมายเหตุ: unsloth ต้องติดตั้งแยกก่อนเสมอ เพราะมี dependency พิเศษ
+# สำหรับ Google Colab:
+#   pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+#   pip install -r requirements.txt
+#
+# ⚠️  DPO ต้องการ VRAM มากกว่า SFT (~10-12GB)
+#     ถ้า Out of Memory ให้ลด max_length ใน DPOConfig
+
+# Core
+torch>=2.1.0
+transformers>=4.40.0
+
+# Unsloth (ติดตั้งแยกตาม platform ด้านบน)
+# unsloth
+
+# Fine-tuning (DPOTrainer และ DPOConfig อยู่ใน trl>=0.8.6)
+trl>=0.8.6
+peft>=0.10.0
+accelerate>=0.28.0
+bitsandbytes>=0.43.0
+
+# Data
+datasets>=2.18.0
