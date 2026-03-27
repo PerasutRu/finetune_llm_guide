@@ -92,7 +92,8 @@ model = FastLanguageModel.get_peft_model(
     model,
     r=16,                          # rank ของ LoRA
     lora_alpha=32,                 # scaling factor (แนะนำ = 2 * r)
-    target_modules="all-linear",   # ใส่ LoRA ทุก linear layer
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
+                    "gate_proj", "up_proj", "down_proj"],,   # ใส่ LoRA ทุก linear layer
     lora_dropout=0,                # 0 = ไม่ใช้ dropout (เร็วกว่า)
     bias="none",                   # ไม่เทรน bias
     use_gradient_checkpointing="unsloth",  # ประหยัด VRAM
